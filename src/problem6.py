@@ -88,6 +88,20 @@ And this one for n=14:
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
 
+   # for k in range(n):
+    #    numb = ''
+     #   new_str = '-'
+      #  spaces = ''
+       # for i in range(k + 1):
+        #    numb = numb + str(i + 1)
+         #   string = ''
+          #  for j in range(len(numb)):
+           #     new_str = new_str + numb[len(numb) - (j + 1)]
+        #print(string + (numb + (i+2)*('*')) + new_str)
+
+
+
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
