@@ -37,16 +37,25 @@ class Pig(object):
         Side effects: Sets instance variables as needed by the other methods.
         """
         # TODO: Implement and test this method.
+        self.pig = Pig()
+        self.weight = weight
+        self.other_pig = other_pig
+        self.new_pig = new_pig
+
+
+
 
     def get_weight(self):
         """ Returns this Pig's weight. """
         # TODO: Implement and test this method.
+        return self.weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
         # TODO: Implement and test this method.
+        self.weight = self.weight + pounds_of_slop
 
     def eat_for_a_year(self):
         """
@@ -60,12 +69,19 @@ class Pig(object):
         """
         # TODO: Implement and test this method.
 
+        self.pig.eat(365)
+
     def heavier_pig(self, other_pig):
         """
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
         # TODO: Implement and test this method.
+        if other_pig > self.pig.weight:
+            return other_pig
+        else:
+            return self.pig
+
 
     def new_pig(self, other_pig):
         """
@@ -73,6 +89,11 @@ class Pig(object):
           of this Pig and the other_Pig.
         """
         # TODO: Implement and test this method.
+        if self.pig > other_pig:
+            new_pig.weight = self.pig.weight
+        else:
+            new_pig.weight = other_pig.weight
+        return new_pig.weight
 
 
 # -----------------------------------------------------------------------------

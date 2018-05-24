@@ -171,7 +171,12 @@ def problem1b(numbers):
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-   
+
+    total = 0
+    for k in range((numbers[len(numbers)//3]-1),(numbers[(len(numbers)//3)+(len(numbers)//3)-1])):
+
+        total = total + numbers[k]
+    return total
 
 
 ###############################################################################

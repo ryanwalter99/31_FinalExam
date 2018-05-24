@@ -88,16 +88,23 @@ And this one for n=14:
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
 
-   # for k in range(n):
-    #    numb = ''
-     #   new_str = '-'
-      #  spaces = ''
-       # for i in range(k + 1):
-        #    numb = numb + str(i + 1)
-         #   string = ''
-          #  for j in range(len(numb)):
-           #     new_str = new_str + numb[len(numb) - (j + 1)]
-        #print(string + (numb + (i+2)*('*')) + new_str)
+    new_string = ''
+    for k in range(n):
+        numb = ''
+        for i in range(k + 1):
+            numb = numb + str(i + 1)
+            string = ''
+
+            for j in range(n - i - 1):
+                string = string + ' '
+                for a in range(n,0,-1):
+                    new_string = new_string + str(a)
+        print(numb+(i+2)*'*'+new_string)
+
+
+
+    #print((string + numb + (i+2)*('*')))
+
 
 
 
