@@ -173,8 +173,10 @@ def problem1b(numbers):
     # -------------------------------------------------------------------------
 
     total = 0
-    for k in range((numbers[len(numbers)//3]-1),(numbers[(len(numbers)//3)+(len(numbers)//3)-1])):
+    start = len(numbers)//3
+    end = 2*start
 
+    for k in range(start,end):
         total = total + numbers[k]
     return total
 

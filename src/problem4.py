@@ -39,8 +39,7 @@ class Pig(object):
         # TODO: Implement and test this method.
         self.pig = Pig()
         self.weight = weight
-        self.other_pig = other_pig
-        self.new_pig = new_pig
+
 
 
 
@@ -69,7 +68,8 @@ class Pig(object):
         """
         # TODO: Implement and test this method.
 
-        self.pig.eat(365)
+        for k in range(365):
+            self.pig.eat(k+1)
 
     def heavier_pig(self, other_pig):
         """
@@ -77,10 +77,11 @@ class Pig(object):
         whichever is heavier.
         """
         # TODO: Implement and test this method.
-        if other_pig > self.pig.weight:
-            return other_pig
-        else:
-            return self.pig
+        if self.weight > other_pig.weight:
+            return self.weight
+
+        if self.weight < other_pig.weight:
+            return other_pig.weight
 
 
     def new_pig(self, other_pig):
@@ -89,11 +90,9 @@ class Pig(object):
           of this Pig and the other_Pig.
         """
         # TODO: Implement and test this method.
-        if self.pig > other_pig:
-            new_pig.weight = self.pig.weight
-        else:
-            new_pig.weight = other_pig.weight
-        return new_pig.weight
+        return Pig(other_pig.weight+self.weight)
+
+
 
 
 # -----------------------------------------------------------------------------
