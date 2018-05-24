@@ -95,11 +95,11 @@ And this one for n=14:
             numb = numb + str(i + 1)
             string = ''
 
-            for j in range(n - i - 1):
-                string = string + ' '
-                for a in range(n,0,-1):
-                    new_string = new_string + str(a)
-        print(numb+(i+2)*'*'+new_string)
+        for j in range(n - i - 1):
+            string = string + ' '
+        for a in range(n-k,0,-1):
+            new_string = new_string + str(a)
+        print((numb+(i+2)*'*'+new_string))
 
 
 
