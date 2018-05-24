@@ -139,7 +139,11 @@ def problem5(m, numbers1, numbers2):
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    new_list = []
+    for k in range(len(numbers1)):
+        if numbers1[k]*m == (numbers2[k]):
+            new_list = new_list + [numbers1[k],numbers2[k]]
+    return new_list
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
